@@ -1,7 +1,6 @@
-
-import VGGUnet
-import VGGSegnet
-import FCN8
-import FCN32
+#import VGGUnet
+#import VGGSegnet
+#import FCN8
+#import FCN32
 
 
