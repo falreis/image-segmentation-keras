@@ -3,7 +3,7 @@
 import argparse
 #import Models , LoadBatches
 import LoadBatches
-from Models import VGGSegnet, FCN8, Segnet
+from Models import Segnet, Unet
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--save_weights_path", type = str  )
@@ -48,7 +48,7 @@ if validate:
 	val_batch_size = args.val_batch_size
 
 #modelFns = { 'vgg_segnet':Models.VGGSegnet.VGGSegnet , 'vgg_unet':Models.VGGUnet.VGGUnet , 'vgg_unet2':Models.VGGUnet.VGGUnet2 , 'fcn8':Models.FCN8.FCN8 , 'fcn32':Models.FCN32.FCN32   }
-modelFns = { 'segnet':Segnet.Segnet}
+modelFns = { 'segnet':Segnet.Segnet, 'unet':Unet.Unet}
 modelFN = modelFns[ model_name ]
 
 m = modelFN( n_classes , input_height=input_height, input_width=input_width   )
