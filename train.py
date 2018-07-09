@@ -1,4 +1,4 @@
-#python  train.py  --save_weights_path=weights/ex1  --train_images="data/dataset1/images_prepped_train/"  --train_annotations="data/dataset1/annotations_prepped_train/"  --val_images="data/dataset1/images_prepped_test/"  --val_annotations="data/dataset1/annotations_prepped_test/"  --n_classes=10  --input_height=320  --input_width=480  --model_name="segnet" --epochs=1
+#python train.py --save_weights_path=weights/ex1 --train_images="data/dataset1/images_prepped_train/" --train_annotations="data/dataset1/annotations_prepped_train/" --val_images="data/dataset1/images_prepped_test/" --val_annotations="data/dataset1/annotations_prepped_test/" --n_classes=10 --input_height=320 --input_width=480 --model_name="segnet" --epochs=1
 
 import argparse
 #import Models , LoadBatches
