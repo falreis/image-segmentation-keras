@@ -1,29 +1,25 @@
 \begin{thebibliography}{1}\itemsep=-1pt
 
-\bibitem{Alpher02}
-A.~Alpher.
-\newblock Frobnication.
-\newblock {\em Journal of Foo}, 12(1):234--778, 2002.
+\bibitem{SLIC}
+R.~Achanta, A.~Shaji, K.~Smith, A.~Lucchi, P.~Fua, and S.~Süsstrunk.
+\newblock Slic superpixels compared to state-of-the-art superpixel methods.
+\newblock {\em IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  34(11):2274--2282, Nov 2012.
 
-\bibitem{Alpher03}
-A.~Alpher and J.~P.~N. Fotheringham-Smythe.
-\newblock Frobnication revisited.
-\newblock {\em Journal of Foo}, 13(1):234--778, 2003.
+\bibitem{DOMINGUEZ}
+D.~Domínguez and R.~R. Morales.
+\newblock {\em Image Segmentation: Advances}, volume~1.
+\newblock 2016.
 
-\bibitem{Alpher04}
-A.~Alpher, J.~P.~N. Fotheringham-Smythe, and G.~Gamow.
-\newblock Can a machine frobnicate?
-\newblock {\em Journal of Foo}, 14(1):234--778, 2004.
+\bibitem{FELZENSZWALB}
+P.~F. Felzenszwalb and D.~P. Huttenlocher.
+\newblock Efficient graph-based image segmentation.
+\newblock {\em International Journal of Computer Vision}, 59(2):167--181, Sep
+  2004.
 
-\bibitem{Authors14}
-Authors.
-\newblock The frobnicatable foo filter, 2014.
-\newblock Face and Gesture submission ID 324. Supplied as additional material
-  {\tt fg324.pdf}.
-
-\bibitem{Authors14b}
-Authors.
-\newblock Frobnication tutorial, 2014.
-\newblock Supplied as additional material {\tt tr.pdf}.
+\bibitem{WANG201728}
+M.~Wang, X.~Liu, Y.~Gao, X.~Ma, and N.~Q. Soomro.
+\newblock Superpixel segmentation: A benchmark.
+\newblock {\em Signal Processing: Image Communication}, 56:28 -- 39, 2017.
 
 \end{thebibliography}
