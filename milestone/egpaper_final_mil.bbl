@@ -1,4 +1,10 @@
-\begin{thebibliography}{1}\itemsep=-1pt
+\begin{thebibliography}{10}\itemsep=-1pt
+
+\bibitem{SLIC}
+R.~Achanta, A.~Shaji, K.~Smith, A.~Lucchi, P.~Fua, and S.~Süsstrunk.
+\newblock Slic superpixels compared to state-of-the-art superpixel methods.
+\newblock {\em IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  34(11):2274--2282, Nov 2012.
 
 \bibitem{AHMED_SARMA}
 S.~A. Ahmed, S.~Dey, and K.~K. Sarma.
@@ -6,9 +12,48 @@ S.~A. Ahmed, S.~Dey, and K.~K. Sarma.
 \newblock In {\em 2011 2nd National Conference on Emerging Trends and
   Applications in Computer Science}, pages 1--4, March 2011.
 
+\bibitem{BSDS500}
+P.~Arbelaez, M.~Maire, C.~Fowlkes, and J.~Malik.
+\newblock Contour detection and hierarchical image segmentation.
+\newblock {\em IEEE Trans. Pattern Anal. Mach. Intell.}, 33(5):898--916, 5
+  2011.
+
+\bibitem{SEGNET}
+V.~Badrinarayanan, A.~Kendall, and R.~Cipolla.
+\newblock Segnet: {A} deep convolutional encoder-decoder architecture for image
+  segmentation.
+\newblock {\em CoRR}, abs/1511.00561, 2015.
+
 \bibitem{DOMINGUEZ}
 D.~Domínguez and R.~R. Morales.
 \newblock {\em Image Segmentation: Advances}, volume~1.
 \newblock 2016.
+
+\bibitem{FELZENSZWALB}
+P.~F. Felzenszwalb and D.~P. Huttenlocher.
+\newblock Efficient graph-based image segmentation.
+\newblock {\em International Journal of Computer Vision}, 59(2):167--181, Sep
+  2004.
+
+\bibitem{UNET_WEBSITE}
+V.~P. Recognition and F.~o.~E. Image~Processing, Dept. of Computer~Science.
+\newblock U-net: Convolutional networks for biomedical image segmentation,
+  2018.
+
+\bibitem{UNET}
+O.~Ronneberger, P.Fischer, and T.~Brox.
+\newblock U-net: Convolutional networks for biomedical image segmentation.
+\newblock In {\em Medical Image Computing and Computer-Assisted Intervention
+  (MICCAI)}, volume 9351 of {\em LNCS}, pages 234--241. Springer, 2015.
+\newblock (available on arXiv:1505.04597 [cs.CV]).
+
+\bibitem{VGGNET}
+K.~Simonyan and A.~Zisserman.
+\newblock Very deep convolutional networks for large-scale image recognition.
+\newblock {\em CoRR}, abs/1409.1556, 2014.
+
+\bibitem{SEGNET_WEBSITE}
+C.~Vision and U.~Robotics Group at the University~of Cambridge.
+\newblock Segnet, 2018.
 
 \end{thebibliography}
