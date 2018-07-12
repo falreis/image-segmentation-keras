@@ -30,7 +30,7 @@
 \begin{document}
 
 %%%%%%%%% TITLE
-\title{\textit{Project Milestone:} Convolutional Neural Network to Image Segmentation}
+\title{Convolutional Neural Network to Image Segmentation}
 
 \author{Felipe Augusto Lima Reis\\
 PUC Minas - Pontif\'icia Universidade Cat\'olica de Minas Gerais\\
@@ -55,28 +55,30 @@ R. Walter Ianni 255 - Bloco L - Belo Horizonte, MG, Brasil\\
 %%%%%%%%% BODY TEXT
 \section{Introduction}
 
-Image segmentation refers to the partition of an image into a set of regions to cover it, to represent meaningful areas \cite{DOMINGUEZ}. The goal is to simplify and/or change the representation of an image into something
-that is more meaningful and easier to analyze \cite{AHMED_SARMA}.
+Image segmentation refers to the partition of an image into a set of regions to cover it, to represent meaningful areas \cite{DOMINGUEZ}. In this task, it's possible to take pixels as base unit in most image processing tasks\cite{WANG201728}. Segmentation has two main objectives: the first is to decompose the image into parts for further analysis and the second one is to perform a change of representation \cite{DOMINGUEZ}.
 
-Segmentation has two main objectives: the first one is to decompose the image into parts for further analysis and the second one is to perform a change of representation \cite{DOMINGUEZ}. Also, segmentation must follow some characteristics to identify regions, as it follows:
-
-\begin{itemize}
- \item Regions of an image segmentation should be uniform and homogeneous with respect to some characteristic, such as gray level, color, or texture \cite{DOMINGUEZ};
- \item Region interiors should be simple and without many small holes \cite{DOMINGUEZ};
- \item Adjacent regions of a segmentation should have significantly different values with respect to the characteristic on which they are uniform \cite{DOMINGUEZ};
- \item Boundaries of each segment should be smooth, not ragged, and should be spatially accurate \cite{DOMINGUEZ}.
-\end{itemize}
-
-The organization of this paper is as follows. In the next Section we discuss the problem statement.  In Section \ref{sec:tech_approach} its explained how the will work and the results we expect. Then in Section \ref{sec:results} we present an some preliminary results.
+The organization of this paper is as follows. In the next Section we discuss some related work and segmentations methods.  In Section \ref{sec:mat_metodos} its explained the method used in this paper. Then in Section \ref{sec:testes} we present an the results of the tests made for this paper and analise them. In Section 5 conclude the work.
 
 %-------------------------------------------------------------------------
-\section{Problem Statement} \label{sec:prob_statement}
+\section{Related Work} \label{sec:ref_teorico}
+
+Superpixels are the result of perceptual grouping of pixels, or seen the other way around, the results of an image oversegmentation \cite{WANG201728}. One example of oversegmentation can be seen in Figure \ref{fig:superpixel}. Superpixel can cause substantial speed-up of subsequent processing since the number of superpixels of an image reduces in contrast with the original number of pixels \cite{WANG201728}.
+ 
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.48\textwidth]{superpixels.png}
+  \caption{Segmented images using SLICO and EGB superpixels}
+  \label{fig:superpixel}
+\end{figure}
 
 %-------------------------------------------------------------------------
-\section{Technical Approach} \label{sec:tech_approach}
+\section{Segmentation Method} \label{sec:mat_metodos}
 
 %-------------------------------------------------------------------------
-\section{Preliminary Results} \label{sec:results}
+\section{Tests and Results} \label{sec:testes}
+
+%-------------------------------------------------------------------------
+\section{Conclusion} \label{sec:conclusao}
 
 %-------------------------------------------------------------------------
 
