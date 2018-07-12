@@ -30,7 +30,7 @@
 \begin{document}
 
 %%%%%%%%% TITLE
-\title{Convolutional Neural Network to Image Segmentation}
+\title{\textit{Project Milestone:} Convolutional Neural Network to Image Segmentation}
 
 \author{Felipe Augusto Lima Reis\\
 PUC Minas - Pontif\'icia Universidade Cat\'olica de Minas Gerais\\
@@ -53,7 +53,7 @@ R. Walter Ianni 255 - Bloco L - Belo Horizonte, MG, Brasil\\
 \end{abstract}
 
 %%%%%%%%% BODY TEXT
-\section{Introduction}
+\section{Introduction} \label{introduction}
 
 Image segmentation refers to the partition of an image into a set of regions to cover it, to represent meaningful areas \cite{DOMINGUEZ}. The goal is to simplify and/or change the representation of an image into something
 that is more meaningful and easier to analyze \cite{AHMED_SARMA}.
@@ -67,30 +67,41 @@ Segmentation has two main objectives: the first one is to decompose the image in
  \item Boundaries of each segment should be smooth, not ragged, and should be spatially accurate \cite{DOMINGUEZ}.
 \end{itemize}
 
-This paper evaluates segmentation methods using Deep Neural Networks and compares with classical methods of segmentation, using the superpixels approach. Also, the paper evaluates the composition of classical methods with DNN approach, to speed up the training process and become more accurate.
+The future paper will evaluate segmentation methods using Deep Neural Networks and compares with classical methods of segmentation, using the superpixels approach. Also, the paper will evaluate the composition of classical methods with DNN approach, to speed up the training process and become more accurate.
 
-The organization of this paper is as follows. In the next Section we discuss some related work and segmentations methods.  In Section \ref{sec:mat_metodos} its explained the method used in this paper. Then in Section \ref{sec:testes} we present an the results of the tests made for this paper and analise them. In Section \label{sec:conclusao} conclude the work.
+The organization of this paper is as follows. In the next Section we discuss the problem statement. In Section \ref{sec:tech_approach} its explained how the will work and the results we expect. Then in Section \ref{sec:results} we present an some preliminary results.
 
 %-------------------------------------------------------------------------
-\section{Related Work} \label{sec:ref_teorico}
+\section{Problem Statement} \label{sec:prob_statement}
 
-Superpixels are the result of perceptual grouping of pixels, or seen the other way around, the results of an image oversegmentation \cite{WANG201728}. One example of oversegmentation can be seen in Figure \ref{fig:superpixel}. Superpixel can cause substantial speed-up of subsequent processing since the number of superpixels of an image reduces in contrast with the original number of pixels \cite{WANG201728}.
- 
+The future paper will evaluate segmentation methods using Deep Neural Networks and compares with classical methods of segmentation, using the superpixels approach. Also, the paper will evaluate the composition of classical methods with DNN approach, to speed up the training process and become more accurate.
+
+To provide the goals we explained in Section \ref{introduction}, the paper will use Convolutional Neural Networks provided by the literature. To provide segmentation the paper will use SEGNET, a deep encoder-decoder architecture for multi-class pixelwise segmentation \cite{SEGNET}. 
+
+The SEGNET architecture consists of a sequence of non-linear processing layers (encoders) and a corresponding set of decoders followed by a pixelwise classifier \cite{SEGNET} \cite{SEGNET_WEBSITE}. Typically, each encoder consists of one or more convolutional layers with batch normalisation and a ReLU non-linearity, followed by non-overlapping maxpooling and sub-sampling \cite{SEGNET} \cite{SEGNET_WEBSITE}. The sparse encoding due to the pooling process is upsampled in the decoder using the maxpooling indices in the encoding sequence \cite{SEGNET} \cite{SEGNET_WEBSITE}. Figure \ref{fig:segnet} presents the architecture of SEGNET.
+
 \begin{figure}[ht]
   \centering
-  \includegraphics[width=0.48\textwidth]{superpixels.png}
-  \caption{Segmented images using SLICO and EGB superpixels}
-  \label{fig:superpixel}
+  \includegraphics[width=0.48\textwidth]{segnet.png}
+  \caption{SEGNET architecture. \textit{Image adapted from SEGNET project website} \cite{SEGNET_WEBSITE} \cite{SEGNET}}
+  \label{fig:segnet}
 \end{figure}
 
-%-------------------------------------------------------------------------
-\section{Segmentation Method} \label{sec:mat_metodos}
+\cite{VGGNET} \cite{UNET}.
+
+Main Dataset: Berkeley Segmentation Data Set and Benchmarks 500 (BSDS500)
+○ Provides Contour Detection and Image Segmentation Resources;
+○ As BSDS500 provides few images, it will be necessary using Data Augmentation;
+○ Other possible datasets: KITTI Road
+Evaluation: BSDS500 Performance Evaluation
+○ Provides evaluation using Precision and Recall Method;
+○ Code in Matlab provided with BSDS500 dataset \cite{BSDS500}.
 
 %-------------------------------------------------------------------------
-\section{Tests and Results} \label{sec:testes}
+\section{Technical Approach} \label{sec:tech_approach}
 
 %-------------------------------------------------------------------------
-\section{Conclusion}
+\section{Preliminary Results} \label{sec:results}
 
 %-------------------------------------------------------------------------
 
