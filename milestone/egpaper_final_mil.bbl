@@ -63,6 +63,14 @@ P.~F. Felzenszwalb and D.~P. Huttenlocher.
 \newblock {\em International Journal of Computer Vision}, 59(2):167--181, Sep
   2004.
 
+\bibitem{VGG16_IMG}
+P.~Kochakarn.
+\newblock Machine learning with python: Image classifier using vgg16 model -
+  part 1: Theory.
+\newblock
+  \url{https://www.techkingdom.org/single-post/2017/11/07/Machine-Learning-with-Python-Image-Classifier-using-VGG16-Model---Coming-Soon},
+  2017.
+
 \bibitem{AUGM_DEEP}
 L.~Perez and J.~Wang.
 \newblock The effectiveness of data augmentation in image classification using

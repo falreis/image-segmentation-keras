@@ -5,45 +5,45 @@ The style file: ieee.bst
 Database file #1: egbib.bib
 Warning--can't use both volume and number fields in DOMINGUEZ
 Warning--empty publisher in DOMINGUEZ
-You've used 20 entries,
+You've used 21 entries,
             2120 wiz_defined-function locations,
-            639 strings with 7913 characters,
-and the built_in function-call counts, 8019 in all, are:
-= -- 742
-> -- 528
+            644 strings with 8161 characters,
+and the built_in function-call counts, 8227 in all, are:
+= -- 762
+> -- 535
 < -- 7
-+ -- 210
-- -- 188
-* -- 610
-:= -- 1350
-add.period$ -- 64
-call.type$ -- 20
-change.case$ -- 152
++ -- 213
+- -- 190
+* -- 616
+:= -- 1385
+add.period$ -- 67
+call.type$ -- 21
+change.case$ -- 156
 chr.to.int$ -- 0
-cite$ -- 22
-duplicate$ -- 264
-empty$ -- 530
-format.name$ -- 188
-if$ -- 1648
+cite$ -- 23
+duplicate$ -- 271
+empty$ -- 552
+format.name$ -- 190
+if$ -- 1694
 int.to.chr$ -- 0
-int.to.str$ -- 20
+int.to.str$ -- 21
 missing$ -- 17
-newline$ -- 104
-num.names$ -- 40
-pop$ -- 165
+newline$ -- 109
+num.names$ -- 42
+pop$ -- 173
 preamble$ -- 1
-purify$ -- 133
+purify$ -- 136
 quote$ -- 0
-skip$ -- 215
+skip$ -- 222
 stack$ -- 0
-substring$ -- 334
-swap$ -- 73
+substring$ -- 339
+swap$ -- 74
 text.length$ -- 7
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 78
+type$ -- 82
 warning$ -- 2
-while$ -- 59
-width$ -- 22
-write$ -- 226
+while$ -- 61
+width$ -- 23
+write$ -- 236
 (There were 2 warnings)
