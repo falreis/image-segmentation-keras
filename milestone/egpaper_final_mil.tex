@@ -133,20 +133,32 @@ U-NET architecture consists of the repeated application of two 3x3 convolutions 
 %-------------------------------------------------------------------------
 \subsection{Transfer Learning} \label{ssec:transfer_learning}
 
-Transfer learning is a technique in machine learning that stores knowledge gained while solving one problem, adapt and apply it to a different but related problem. As the grow of neural networks usage, it becomes reasonable to seek out methods that avoid ``reinventing the wheel'', and
- instead are able to build on previously trained networks' results \cite{PRATT} \cite{WEISS2016}.
+Transfer learning is a technique in machine learning that stores knowledge gained while solving one problem, adapt and apply it to a different but related problem. As the grow of neural networks usage, it becomes reasonable to seek out methods that avoid ``reinventing the wheel'', and instead are able to build on previously trained networks' results \cite{PRATT} \cite{WEISS2016}.
 
-In this work it expected to use transfer learning to speed up the training process. For that, it will be used a pretrained VGGNET (Very Deep Convolutional Networks for Large-Scale Image Recognition) \cite{VGGNET}.
+In this work it expected to use transfer learning to speed up the training process. For that, it will be used a pretrained VGG-16 (Very Deep Convolutional Networks for Large-Scale Image Recognition) \cite{VGGNET}. The pretrained VGG-16 will be provided by Keras, a Python Deep Learning Library \cite{KERAS}. Keras is a high-level neural networks API of running on top of TensorFlow \cite{TENSORFLOW}, CNTK \cite{CNTK}, or Theano \cite{THEANO} \cite{KERAS}.
 
+VGG-16 provided by Keras contains weights pre-trained on ImageNet Dataset \cite{IMAGENET}. Imagenet contains a fixed-size 224 × 224 RGB image. VGG-16 passes the image through a stack of convolutional (conv.) layers, where it's used filters with a very small receptive field: $3 \times 3$ \cite{VGGNET}. The convolution stride is fixed to 1 pixel and the spatial padding of convolutional layer input is such that the spatial resolution is preserved after convolution \cite{VGGNET}. Spatial pooling is carried out by five max-pooling layers, which follow some of the convolutional layers \cite{VGGNET}. Max-pooling, them, is performed over a $2 \times 2$ pixel window, with stride 2 \cite{VGGNET}. Figure \ref{fig:vgg16} presents the representation of VGG-16's architecture.
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.48\textwidth]{vgg16.png}
+  \caption{VGG-16 architecture. \textit{Image adapted from TechKingdom website\cite{VGG16_IMG}}}
+  \label{fig:vgg16}
+\end{figure}
+
+To use transfer learning, it will be needed to make some data transformations. First, it will be need to adapt SEGNET architecture to uses VGG-16 weights. Also, the BSDS500 images and ground-truths will be reduced to the shape of $ 224 \times 224$. As BSDS500 images are not square, a process step will be need to transform the shape, adding black borders before reduce the image. This step will avoid deformations in the shape of the image and the ground-truth.
 
 %-------------------------------------------------------------------------
 \subsection{Data Augmentation} \label{ssec:data_augmentation}
 
-% TODO Explain Data Augmentation
+Data augmentation consists in a range of transformations that can be applied to dataset to increase the number of data with the target of improving the
+accuracy and robustness of classifiers \cite{AUGM_ADAPT}. The problem with small datasets is that models trained with them do not generalize well \cite{AUGM_DEEP}.
 
-Once BSDS500 contains only 200 images for training and 100 images for validation, the Neural Network may not learn enough information from the dataset. Then, it's necessary to add some images for training, based on the training and validation set.
+Data augmentation also can act as a regularizer in preventing overfitting in neural networks and improve performance in imbalanced class problems \cite{DATA_AUGM}. According to Wong et al. \cite{DATA_AUGM}, data augmentation is better to perform in data-space instead of feature-space, as long as label preserving transforms are known \cite{DATA_AUGM}.
 
-To provide data augmentation, the images and the ground-truth will be rotated 12 times, 30 degrees each. Also, the images will be flipped and rotated 12 times either. Then, each image will transform into 24 possible images. Then, 200 images for training will become 4800 training images. The number of images is not too big, but can help the DNN predict with more accuracy.
+Once BSDS500 contains only 200 images for training and 100 images for validation, the Neural Network may not generalize well and learn enough information from the dataset. Then, it's necessary provide a range of transformation to add some generated images for training and validation.
+
+To provide data augmentation, the images and the ground-truth will be rotated 12 times, 30 degrees each. Also, the images will be flipped and rotated 12 times each. Then, each image will transform into 24 possible images. Then, 200 images for training set will become 4800 training images and the validation set will contains 2400 images. The number of images is not too big, but can help the DNN predict with more accuracy.
 
 %-------------------------------------------------------------------------
 \section{Preliminary Results} \label{sec:results}

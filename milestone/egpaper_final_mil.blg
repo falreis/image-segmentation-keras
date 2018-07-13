@@ -3,51 +3,47 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: egpaper_final_mil.aux
 The style file: ieee.bst
 Database file #1: egbib.bib
-Warning--entry type for "SEGNET_WEBSITE" isn't style-file defined
---line 170 of file egbib.bib
-Warning--entry type for "UNET_WEBSITE" isn't style-file defined
---line 178 of file egbib.bib
 Warning--can't use both volume and number fields in DOMINGUEZ
 Warning--empty publisher in DOMINGUEZ
-You've used 10 entries,
+You've used 20 entries,
             2120 wiz_defined-function locations,
-            572 strings with 5475 characters,
-and the built_in function-call counts, 3396 in all, are:
-= -- 321
-> -- 175
-< -- 4
-+ -- 68
-- -- 58
-* -- 248
-:= -- 564
-add.period$ -- 30
-call.type$ -- 10
-change.case$ -- 58
+            639 strings with 7913 characters,
+and the built_in function-call counts, 8019 in all, are:
+= -- 742
+> -- 528
+< -- 7
++ -- 210
+- -- 188
+* -- 610
+:= -- 1350
+add.period$ -- 64
+call.type$ -- 20
+change.case$ -- 152
 chr.to.int$ -- 0
-cite$ -- 12
-duplicate$ -- 122
-empty$ -- 261
-format.name$ -- 58
-if$ -- 708
+cite$ -- 22
+duplicate$ -- 264
+empty$ -- 530
+format.name$ -- 188
+if$ -- 1648
 int.to.chr$ -- 0
-int.to.str$ -- 10
-missing$ -- 9
-newline$ -- 52
-num.names$ -- 20
-pop$ -- 65
+int.to.str$ -- 20
+missing$ -- 17
+newline$ -- 104
+num.names$ -- 40
+pop$ -- 165
 preamble$ -- 1
-purify$ -- 49
+purify$ -- 133
 quote$ -- 0
-skip$ -- 97
+skip$ -- 215
 stack$ -- 0
-substring$ -- 171
-swap$ -- 30
-text.length$ -- 4
+substring$ -- 334
+swap$ -- 73
+text.length$ -- 7
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 38
+type$ -- 78
 warning$ -- 2
-while$ -- 30
-width$ -- 12
-write$ -- 109
-(There were 4 warnings)
+while$ -- 59
+width$ -- 22
+write$ -- 226
+(There were 2 warnings)
