@@ -4,6 +4,29 @@
 import scipy.io
 import numpy as np
 
+def get_first_groundTruth(path):
+    """
+    return first groundtruth
+    :param path:
+    :return:
+    """
+    mat = scipy.io.loadmat(path)
+    groundTruth = mat.get('groundTruth')
+    boundary = groundTruth[0][1]['Boundaries'][0][0]
+    
+    #reshape
+    height = boundary.shape[0]
+    width = boundary.shape[1]
+    boundary = boundary.reshape(height, width, 1)
+    
+    boundary[(boundary > 0)] = 255
+    
+    true_boundary = np.zeros((height, width, 3),dtype=np.uint8)
+    for i in range(0,3):
+        true_boundary[:,:,i] = boundary[:,:,0]
+    
+    return true_boundary
+
 
 def get_groundTruth(path):
     """
