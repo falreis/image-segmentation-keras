@@ -20,7 +20,6 @@ from keras import backend as K
 
 
 def Segnet(nClasses , optimizer=None , input_height=360, input_width=480 ):
-
 	kernel = 3
 	filter_size = 64
 	pad = 1

@@ -1,8 +1,11 @@
 #python  predict.py  --save_weights_path=weights/ex1  --epoch_number=0  --test_images="data/dataset1/images_prepped_test/"  --output_path="data/predictions/"  --n_classes=10  --input_height=320  --input_width=480 --model_name="segnet"
 
+import os
+os.environ['TF_CPP_MIN_LOG_LEVEL']='2'
+
 import argparse
 import LoadBatches
-from Models import Segnet
+from Models import Segnet, VGGSegnet, VGGUnet, FCN8, FCN32
 from keras.models import load_model
 import glob
 import cv2
@@ -28,8 +31,8 @@ input_width =  args.input_width
 input_height = args.input_height
 epoch_number = args.epoch_number
 
-#modelFns = { 'vgg_segnet':Models.VGGSegnet.VGGSegnet , 'vgg_unet':Models.VGGUnet.VGGUnet , 'vgg_unet2':Models.VGGUnet.VGGUnet2 , 'fcn8':Models.FCN8.FCN8 , 'fcn32':Models.FCN32.FCN32   }
-modelFns = { 'segnet':Segnet.Segnet}
+#modelFns = { 'segnet':Segnet.Segnet, 'vgg_segnet':VGGSegnet.VGGSegnet , 'vgg_unet':VGGUnet.VGGUnet , 'vgg_unet2':VGGUnet.VGGUnet2 , 'fcn8':FCN8.FCN8 , 'fcn32':FCN32.FCN32 }
+modelFns = { 'segnet':Segnet.Segnet }
 modelFN = modelFns[ model_name ]
 
 m = modelFN( n_classes , input_height=input_height, input_width=input_width   )
@@ -37,7 +40,6 @@ m.load_weights(  args.save_weights_path + "." + str(  epoch_number )  )
 m.compile(loss='categorical_crossentropy',
       optimizer= 'adadelta' ,
       metrics=['accuracy'])
-
 
 output_height = m.outputHeight
 output_width = m.outputWidth
@@ -47,7 +49,7 @@ images.sort()
 
 colors = [  ( random.randint(0,255),random.randint(0,255),random.randint(0,255)   ) for _ in range(n_classes)  ]
 
-for imgName in images:
+for imgName in images[0:1]:
 	outName = imgName.replace( images_path ,  args.output_path )
 	X = LoadBatches.getImageArr(imgName , args.input_width  , args.input_height  )
 	pr = m.predict( np.array([X]) )[0]
