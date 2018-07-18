@@ -66,7 +66,6 @@ def imageSegmentationGenerator( images_path , segs_path ,  batch_size,  n_classe
 	segmentations  = glob.glob( segs_path + "*.jpg"  ) + glob.glob( segs_path + "*.png"  ) +  glob.glob( segs_path + "*.jpeg"  )
 	segmentations.sort()
 
-	print(len( images ), len(segmentations))
 	assert len( images ) == len(segmentations)
 	for im , seg in zip(images,segmentations):
 		assert(  im.split('/')[-1].split(".")[0] ==  seg.split('/')[-1].split(".")[0] )

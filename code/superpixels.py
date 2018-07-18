@@ -5,6 +5,46 @@ from scipy.cluster import hierarchy
 from skimage.segmentation import slic, mark_boundaries, felzenszwalb
 from skimage import io
 
+
+def color_groundtruth(image, segments):
+    #get number of segments
+    n_seg = 0
+    for segs in segments:
+        curr_max = max(segs)
+        if(curr_max > n_seg):
+            n_seg = curr_max
+
+    n_seg += 1
+
+    #initalize variables
+    colors = [[.0, .0, .0] for x in range(n_seg)]
+    itens = [0 for x in range(n_seg)]
+    new_image = copy.deepcopy(image)
+
+    #indexing information
+    len_seg_i = len(segments)
+    len_seg_j = len(segments[0])
+
+    for i in range(len_seg_i):
+        for j in range(len_seg_j):
+            index = segments[i][j]
+            itens[index] += 1
+
+    #define new values
+    len_itens = len(itens)
+
+    for i in range(len_itens):
+        if(itens[i] > 0):
+            colors[i] = (i*5,i*3,i*2)
+
+    #generate new image
+    for i in range(len_seg_i):
+        for j in range(len_seg_j):
+            index = segments[i][j]
+            new_image[i][j] = colors[index]
+            
+    return new_image
+
 def color_superpixel(image, segments):
     #get number of segments
     n_seg = 0
